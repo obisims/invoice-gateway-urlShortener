@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="imgs/favicon/safari-pinned-tab.svg" color="#f15b58">
+    <meta name="msapplication-TileColor" content="#f15b58">
+    <meta name="theme-color" content="#f15b58">
+    <title>obisims Invoice Payments</title>
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function(l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function(v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+    <script>
+        var pathName = window.location.pathname;
+        if (pathName == "/") {} else {
+            pathInfo = pathName.replace("/","");
+            var newURL = "https://script.google.com/macros/s/AKfycbwrMTuyzmbjdhGA0oBzjfhvz-0SjXzVbSWpDJesDmJhApo7ftFe/exec?" + pathInfo;
+            window.open(newURL, '_top');
+        }
+    </script>
+
+    <style>
+     
+        .gas-frame {
+            border: none;
+            border-width: 0;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            background-color: #f15b58;
+            width: 100%;
+        }
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #f15b58;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto','Poppins', sans-serif;
+}
+span{
+  text-align: center;
+ 
+}
+#tilde{
+  font-size: 215px;
+   line-height: 40px;
+ color: #291a2b;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #f15b58;
+}
+.gas-frame{
+  background: #f15b58;
+
+}
+label{
+  position: relative;
+  height: 125px;
+  width: 125px;
+  display: inline-block;
+  border: 20px solid rgba(255,255,255,0.0);
+  border-radius: 50%;
+  border-left-color: #291a2b;
+  animation: rotate 1.2s linear infinite;
+}
+@keyframes rotate {
+  50%{
+    border-left-color: #291a2b;
+  }
+  75%{
+    border-left-color: #291a2b;
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+label .check-icon{
+  display: none;
+}
+label .check-icon:after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 28px;
+  transform: scaleX(-1) rotate(135deg);
+  height: 56px;
+  width: 28px;
+  border-top: 4px solid #291a2b;
+  border-right: 4px solid #f15b58;
+  transform-origin: left top;
+  animation: check-icon 0.8s ease;
+}
+@keyframes check-icon {
+  0%{
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20%{
+    height: 0;
+    width: 28px;
+    opacity: 1;
+  }
+  40%{
+    height: 56px;
+    width: 28px;
+    opacity: 1;
+  }
+  100%{
+    height: 56px;
+    width: 28px;
+    opacity: 1;
+  }
+}
+input{
+  display: none; 
+}
+input:checked ~ label .check-icon{
+  display: block;
+}
+input:checked ~ label{
+  animation: none;
+  border-color: #291a2b;
+  transition: border 0.5s ease-out;
+}
+    </style>
+
+</head>
+
+<body>
+    <input disabled type="checkbox" id="check">
+    <span>
+    <label for="check">
+      <div class="check-icon">
+        
+</div>
+      
+</label>
+    
+      <div id="tilde">~</div>
+    </span>
+
+
+    <iframe class="gas-frame" src="https://script.google.com/macros/s/AKfycbwrMTuyzmbjdhGA0oBzjfhvz-0SjXzVbSWpDJesDmJhApo7ftFe/exec"></iframe>
+<script>
+    // Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    // Optionally log to console "Service Worker found no need to register."
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("sw.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        // Optionally log to console "Service worker registered."
+      });
+  }
+}
+    </script>
+</body>
+
+</html>
