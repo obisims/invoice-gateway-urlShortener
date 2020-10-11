@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/16x16.png">-->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="manifest" href="site.webmanifest">
-    <script src="jquery.min.js"></script>
+   
     <meta name="msapplication-TileColor" content="#f15b58">
     <meta name="description" content="obisims.com multi-system payment gateway" />
       <!--<meta name="theme-color" content="#f15b58">
@@ -20,6 +20,7 @@
     <!-- OBI NOTE: pay.obisims gateway -->
     <meta property="og:type" content="article" />
     <meta property="article:author" content="obisims.com" />
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://source.unsplash.com/1200x630/?money" />
     <script>
@@ -215,7 +216,7 @@ input:checked ~ label{
 if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     // Optionally log to console "Service Worker found no need to register."
-    console.log("Service Worker found no need to register.")
+    console.log("Service Worker found no need to register.",{'navigator.serviceWorker.controller':navigator.serviceWorker.controller},{navigator:navigator})
   } else {
     // Register the service worker
     navigator.serviceWorker
@@ -224,11 +225,12 @@ if ("serviceWorker" in navigator) {
       })
       .then(function (reg) {
         // Optionally log to console "Service worker registered."
-        console.log("Service worker registered.")
+        console.log("Service worker registered.",{reg:reg},{navigator:navigator})
       });
   }
 }
     </script>
+     <script src="jquery.min.js"></script>
 </body>
 
 </html>
