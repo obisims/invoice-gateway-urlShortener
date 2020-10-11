@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="msapplication-TileColor" content="#f15b58">
+    <script src="jquery.min.js"></script>
     <!--
     <meta name="description" content="obisims.com multi-system payment gateway" />
-    --><meta property="description" content="Accept Direct Deposit, Credit Card and supported Cryptocurrencies" />
-    <meta property="og:description" content="Accept Direct Deposit, Credit Card and supported Cryptocurrencies" />
+    --><meta property="description" content="Pay your obisims invoice digitally with Direct Deposit, Credit Card and supported Cryptocurrencies" />
+    <meta property="og:description" content="Pay your obisims invoice digitally with Direct Deposit, Credit Card and supported Cryptocurrencies" />
     
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="theme-color" content="#f15b58">
@@ -17,6 +18,7 @@
     <meta property="og:image" content="https://source.unsplash.com/1200x630/?money" />
     <script>
         /* OB NOTE: pay portal 404 */
+        $('meta[property=og\\:image]').attr('content', 'https://source.unsplash.com/1200x630/?money&obVersion='+Math.floor(Math.random() * 1000).toFixed(0)+'');
       $('meta[property=og\\:image]').attr('content', 'https://source.unsplash.com/1200x630/?money&obVersion='+Math.floor(Math.random() * 1000).toFixed(0)+'');
       var fbxhr = new XMLHttpRequest ();
    fbxhr.open ("POST", "https://graph.facebook.com", true);

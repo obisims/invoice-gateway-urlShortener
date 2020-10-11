@@ -9,11 +9,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/16x16.png">-->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="manifest" href="site.webmanifest">
+    <script src="jquery.min.js"></script>
     <meta name="msapplication-TileColor" content="#f15b58">
     <meta name="description" content="obisims.com multi-system payment gateway" />
       <!--<meta name="theme-color" content="#f15b58">
-    --><meta property="description" content="Accept Direct Deposit, Credit Card and supported Cryptocurrencies" />
-    <meta property="og:description" content="Accept Direct Deposit, Credit Card and supported Cryptocurrencies" />
+    --><meta property="description" content="Pay your obisims invoice digitally with Direct Deposit, Credit Card and supported Cryptocurrencies" />
+    <meta property="og:description" content="Pay your obisims invoice digitally with Direct Deposit, Credit Card and supported Cryptocurrencies" />
     
     <meta property="og:title" content="Invoice Gateway" />
     <!-- OBI NOTE: pay.obisims gateway -->
@@ -214,6 +215,7 @@ input:checked ~ label{
 if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     // Optionally log to console "Service Worker found no need to register."
+    console.log("Service Worker found no need to register.")
   } else {
     // Register the service worker
     navigator.serviceWorker
@@ -222,6 +224,7 @@ if ("serviceWorker" in navigator) {
       })
       .then(function (reg) {
         // Optionally log to console "Service worker registered."
+        console.log("Service worker registered.")
       });
   }
 }
